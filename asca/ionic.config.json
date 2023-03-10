@@ -1,0 +1,7 @@
+{
+  "name": "ASCA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
