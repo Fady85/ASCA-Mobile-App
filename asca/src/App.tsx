@@ -34,10 +34,25 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import React from 'react';
+import { IonContent, IonHeader, IonTitle, IonToolbar ,IonAvatar} from '@ionic/react';
+
+
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+
+      <IonHeader>
+        <IonToolbar>
+        <IonAvatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </IonAvatar>        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding">
+        <h1>Content</h1>
+      </IonContent>
+    
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
