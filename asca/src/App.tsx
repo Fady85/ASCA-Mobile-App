@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { ellipse, cog, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -34,10 +34,30 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import React from 'react';
+import { IonButton, IonHeader, IonTitle, IonToolbar ,IonButtons} from '@ionic/react';
+import {personCircle ,camera, podium } from 'ionicons/icons';
+
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+
+      <IonHeader>
+      <IonToolbar>
+        {/* <IonButtons slot="secondary">
+          <IonButton>
+            <IonIcon slot="icon-only" icon={search}></IonIcon>
+          </IonButton>
+        </IonButtons> */}
+        <IonButtons slot="primary">
+          <IonButton>
+            <IonIcon slot="icon-only" icon={personCircle} size="large"></IonIcon>
+          </IonButton>
+        </IonButtons>
+      </IonToolbar>
+      </IonHeader>
+
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -56,15 +76,15 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
+            <IonIcon aria-hidden="true" icon={camera}  />
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonIcon aria-hidden="true" icon={podium} />
             <IonLabel>Tab 2</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={cog} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
         </IonTabBar>
