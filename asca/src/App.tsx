@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, cog, triangle } from 'ionicons/icons';
+import { ellipse, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -36,7 +36,7 @@ import './theme/variables.css';
 
 import React from 'react';
 import { IonButton, IonHeader, IonTitle, IonToolbar ,IonButtons} from '@ionic/react';
-import {personCircle ,camera, podium } from 'ionicons/icons';
+import {personCircle ,camera, podium , cog} from 'ionicons/icons';
 
 setupIonicReact();
 
