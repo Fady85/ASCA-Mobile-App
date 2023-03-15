@@ -70,28 +70,13 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 
-export function usePhotoGallery() {
-  const takePhoto = async () => {
-    const photo = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
-      source: CameraSource.Camera,
-      quality: 100,
-      
-    });
-  };
 
-  return {
-    takePhoto,
-    
-  };
-}
 
 setupIonicReact();
 
 
 const App: React.FC = () => {
 
-  const { takePhoto } = usePhotoGallery();
 
   return (
     <IonApp>
