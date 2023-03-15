@@ -38,12 +38,7 @@ import React from 'react';
 import { IonButton, IonHeader, IonTitle, IonToolbar ,IonButtons} from '@ionic/react';
 import {personCircle ,camera, podium , cog} from 'ionicons/icons';
 
-import { useState, useEffect } from 'react';
-import { isPlatform } from '@ionic/react';
-import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
-import { Filesystem, Directory } from '@capacitor/filesystem';
-import { Preferences } from '@capacitor/preferences';
-import { Capacitor } from '@capacitor/core';
+
 
 //Database Key
 
@@ -106,7 +101,7 @@ const App: React.FC = () => {
             </Route>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1" onClick={() => takePhoto()}>
+            <IonTabButton tab="tab1" href="/tab1">
               <IonIcon aria-hidden="true" icon={camera} />
               <IonLabel>Camera</IonLabel>
             </IonTabButton>
