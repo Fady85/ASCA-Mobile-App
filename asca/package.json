@@ -17,6 +17,8 @@
     "@ionic/pwa-elements": "^3.1.1",
     "@ionic/react": "^6.6.2",
     "@ionic/react-router": "^6.0.0",
+    "@react-native-firebase/app": "^17.3.2",
+    "@react-navigation/native": "^6.1.6",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^12.6.3",
