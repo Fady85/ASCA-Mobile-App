@@ -1,0 +1,21 @@
+[debug] [2023-03-15T21:56:59.412Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T21:56:59.413Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\SA-PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-15T21:56:59.414Z] CLI Version:   11.24.1
+[debug] [2023-03-15T21:56:59.414Z] Platform:      win32
+[debug] [2023-03-15T21:56:59.414Z] Node Version:  v18.15.0
+[debug] [2023-03-15T21:56:59.415Z] Time:          Wed Mar 15 2023 23:56:59 GMT+0200 (Eastern European Standard Time)
+[debug] [2023-03-15T21:56:59.415Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T21:56:59.423Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T21:56:59.423Z] > authorizing via signed-in user (jorge.girgis@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\SA-PC\Documents\Github\ASCA-Mobile-App\ASCA-Mobile-App\asca
+

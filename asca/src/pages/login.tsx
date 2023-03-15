@@ -15,6 +15,27 @@ import { loginUser } from "../firebaseConfig";
 import { toast } from "../toast";
 import { setUserState } from "../redux/actions";
 import { useDispatch } from "react-redux";
+import firebase from "firebase/app";
+import "firebase/auth";
+import { firebaseConfig } from "./firebaseConfig";
+
+firebase.initializeApp(firebaseConfig);
+
+
+const firebaseConfig = {
+	apiKey: "AIzaSyARsN4QHsKhKZy42hdq5lz3pPrDTjUxHRM",
+	authDomain: "asca-d66e4.firebaseapp.com",
+	projectId: "asca-d66e4",
+	storageBucket: "asca-d66e4.appspot.com",
+	messagingSenderId: "158258429719",
+	appId: "1:158258429719:web:a293837ef7dbd23a1f4152",
+	measurementId: "G-8WLKBQWMJJ"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  
 
 const Login: React.FC = () => {
 	const [busy, setBusy] = useState<boolean>(false);
