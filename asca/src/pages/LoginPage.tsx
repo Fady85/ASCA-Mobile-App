@@ -16,7 +16,7 @@ const Login: React.FC = () => {
   const handleLogin = async () => {
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      history.push('/dashboard');
+      history.push('/Tab1');
     } catch (error) {
       const errorMessage = (error as { message: string }).message;
       alert(errorMessage);

@@ -45,7 +45,7 @@ const Register = () => {
   };
 
   const handleSignIn = () => {
-    history.push('/login');
+    history.push('/');
   };
 
   return (
@@ -74,7 +74,7 @@ const Register = () => {
       </IonButton>
       <div className="signIn-section">
         <span>Already have an account? </span>
-        <Link to="/login">Log In</Link>
+        <Link to="/">Log In</Link>
       </div>
     </div>
   );

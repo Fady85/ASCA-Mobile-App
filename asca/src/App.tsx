@@ -51,38 +51,15 @@ import ResetPasswordPage from './pages/ResetPasswordPage';
 
 
 
-export function usePhotoGallery() {
-  const takePhoto = async () => {
-    const photo = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
-      source: CameraSource.Camera,
-      quality: 100,
-      
-    });
-  };
-
-  return {
-    takePhoto,
-    
-  };
-}
-
 setupIonicReact();
 
 
 const App: React.FC = () => {
-  const { takePhoto } = usePhotoGallery();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
-  useEffect(() => {
-    // Your logic to check if user is logged in or not
-    // Update the state of isLoggedIn accordingly
-  }, []);
-
 
   return (
-    <IonApp>
-      
+<IonApp>
+
+
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
@@ -98,41 +75,16 @@ const App: React.FC = () => {
             <Route path="/tab3">
               <Tab3 />
             </Route>
-            
+
           </IonRouterOutlet>
-          </IonTabs>
-      </IonReactRouter>
-{/* 
-    {isLoggedIn && (
-  <> */}
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="primary">
-            <IonButton>
-              <IonIcon slot="icon-only" icon={personCircle} size="large" />
-            </IonButton>
-          </IonButtons>
-        </IonToolbar>
-      </IonHeader>
 
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1" onClick={() => takePhoto()}>
-              <IonIcon aria-hidden="true" icon={camera} />
-              <IonLabel>Camera</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon aria-hidden="true" icon={podium} />
-              <IonLabel>Tab 2</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
-              <IonIcon aria-hidden="true" icon={cog} />
-              <IonLabel>Tab 3</IonLabel>
-            </IonTabButton>
+
+          <IonTabBar >
           </IonTabBar>
-  
-      {/* </>
-      )} */}
 
+          
+        </IonTabs>
+      </IonReactRouter>
     </IonApp>
   );
 };
