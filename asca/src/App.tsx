@@ -72,24 +72,22 @@ setupIonicReact();
 
 
 const App: React.FC = () => {
-
   const { takePhoto } = usePhotoGallery();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Your logic to check if user is logged in or not
+    // Update the state of isLoggedIn accordingly
+  }, []);
+
 
   return (
     <IonApp>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="primary">
-            <IonButton>
-              <IonIcon slot="icon-only" icon={personCircle} size="large" />
-            </IonButton>
-          </IonButtons>
-        </IonToolbar>
-      </IonHeader>
+      
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/reset" component={ResetPasswordPage} />
             <Route exact path="/tab1">
@@ -101,10 +99,20 @@ const App: React.FC = () => {
             <Route path="/tab3">
               <Tab3 />
             </Route>
-            <Route exact path="/">
-              <Redirect to="/tab1" />
-            </Route>
+            
           </IonRouterOutlet>
+
+
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="primary">
+            <IonButton>
+              <IonIcon slot="icon-only" icon={personCircle} size="large" />
+            </IonButton>
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
+
           <IonTabBar slot="bottom">
             <IonTabButton tab="tab1" href="/tab1" onClick={() => takePhoto()}>
               <IonIcon aria-hidden="true" icon={camera} />
