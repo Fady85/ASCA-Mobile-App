@@ -1,4 +1,5 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route ,Switch } from 'react-router-dom';
+
 import {
   IonApp,
   IonIcon,
@@ -70,11 +71,23 @@ setupIonicReact();
 
 
 const App: React.FC = () => {
+  const [loggedIn, setLoggedIn] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setLoggedIn(user !== null); // set the loggedIn state based on whether the user is authenticated or not
+    });
+    return unsubscribe;
+  }, []);
+  
 
   const { takePhoto } = usePhotoGallery();
 
   return (
+
+    
     <IonApp>
+       {loggedIn && (
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="primary">
@@ -84,25 +97,21 @@ const App: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
+        )}
+        
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-          <Route exact path="/login" component={LoginPage} />
+            <Switch>
+              <Route exact path="/" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/reset" component={ResetPasswordPage} />
-            <Route exact path="/tab1">
-              <Tab1 />
-            </Route>
-            <Route exact path="/tab2">
-              <Tab2 />
-            </Route>
-            <Route path="/tab3">
-              <Tab3 />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/tab1" />
-            </Route>
+
+          </Switch>
+
           </IonRouterOutlet>
+          {loggedIn && (
+
           <IonTabBar slot="bottom">
             <IonTabButton tab="tab1" href="/tab1" onClick={() => takePhoto()}>
               <IonIcon aria-hidden="true" icon={camera} />
@@ -117,6 +126,7 @@ const App: React.FC = () => {
               <IonLabel>Tab 3</IonLabel>
             </IonTabButton>
           </IonTabBar>
+            )}
         </IonTabs>
       </IonReactRouter>
     </IonApp>

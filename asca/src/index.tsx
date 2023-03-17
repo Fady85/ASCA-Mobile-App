@@ -14,8 +14,7 @@ import "firebase/compat/database";
 import "firebase/compat/storage";
 import { firebaseConfig } from './firebaseConfig';
 firebase.initializeApp(firebaseConfig);
-
-    
+ 
 defineCustomElements(window);
 
 
