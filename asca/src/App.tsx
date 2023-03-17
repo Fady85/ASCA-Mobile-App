@@ -72,7 +72,7 @@ setupIonicReact();
 
 const App: React.FC = () => {
   const { takePhoto } = usePhotoGallery();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     // Your logic to check if user is logged in or not
@@ -100,8 +100,11 @@ const App: React.FC = () => {
             </Route>
             
           </IonRouterOutlet>
-
-
+          </IonTabs>
+      </IonReactRouter>
+{/* 
+    {isLoggedIn && (
+  <> */}
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="primary">
@@ -126,8 +129,10 @@ const App: React.FC = () => {
               <IonLabel>Tab 3</IonLabel>
             </IonTabButton>
           </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
+  
+      {/* </>
+      )} */}
+
     </IonApp>
   );
 };
