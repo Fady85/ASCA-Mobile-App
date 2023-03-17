@@ -49,8 +49,6 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 
-
-
 export function usePhotoGallery() {
   const takePhoto = async () => {
     const photo = await Camera.getPhoto({
