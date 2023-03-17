@@ -5,6 +5,17 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
+
+// firebase
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import "firebase/compat/database";
+import "firebase/compat/storage";
+import { firebaseConfig } from './firebaseConfig';
+firebase.initializeApp(firebaseConfig);
+
+    
 defineCustomElements(window);
 
 
