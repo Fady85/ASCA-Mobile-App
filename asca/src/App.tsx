@@ -47,27 +47,7 @@ import { Capacitor } from '@capacitor/core';
 
 //Database Key
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyARsN4QHsKhKZy42hdq5lz3pPrDTjUxHRM",
-  authDomain: "asca-d66e4.firebaseapp.com",
-  projectId: "asca-d66e4",
-  storageBucket: "asca-d66e4.appspot.com",
-  messagingSenderId: "158258429719",
-  appId: "1:158258429719:web:a293837ef7dbd23a1f4152",
-  measurementId: "G-8WLKBQWMJJ"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 
 export function usePhotoGallery() {
