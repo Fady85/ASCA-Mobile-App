@@ -34,7 +34,6 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-import React from 'react';
 import { IonButton, IonHeader, IonTitle, IonToolbar ,IonButtons} from '@ionic/react';
 import {personCircle ,camera, podium , cog} from 'ionicons/icons';
 
@@ -48,7 +47,6 @@ import { Capacitor } from '@capacitor/core';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
-
 
 
 
